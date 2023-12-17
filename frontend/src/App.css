@@ -78,17 +78,24 @@
      display: flex;
      justify-content: center;
      align-items: center;
-   
-   
+  
   }
+
   
   .task-list li{
     margin: 8px  0px;
-    padding: 6px 0px;
+    padding: 6px 10px;
     border-radius: 5px;
     width: 40%;
+    background-color: lightgray;
     list-style-type: none;
-    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-list li span{
+    cursor: pointer;
   }
   
   

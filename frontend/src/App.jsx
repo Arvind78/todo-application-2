@@ -8,15 +8,13 @@ const App = () => {
   const [taskData, setTaskData] = useState([]);
 
   // useEffect to clear tasks initially 
-  useEffect(() => {
-    axios("https://todo-8m11.onrender.com/clear")
-      .then((data) => console.log(data.data)) 
-      .catch((err) => { throw err });
-  }, []);
+  // useEffect(() => {
+  //   getDataHandler();
+  // }, []);
 
   // Function to fetch tasks from the server
   const getDataHandler = () => {
-    axios("https://todo-8m11.onrender.com/todos")
+    axios("http://localhost:8080/todos")
       .then((data) => setTaskData(data.data))
       .catch((err) => { throw err });
   }
@@ -24,12 +22,23 @@ const App = () => {
   // Function to handle adding a new task
   const taskHandler = (e) => {
     e.preventDefault();
-    axios.post("https://todo-8m11.onrender.com/add/todo", { task: taskValue })
+    axios.post("http://localhost:8080/todos", { task: taskValue })
+      .then((data) => {
+        getDataHandler(),
+        console.log(data.data);
+        // Fetch updated tasks after adding a new one
+      })
+      .catch((err) => { throw err });
+    setTaskValue(""); // Clear the task input field after adding a task
+  }
+
+  const removeTodoHandler = (id) => {
+ 
+    axios.delete(`http://localhost:8080/todos/${id}`)
       .then(() => {
         getDataHandler(); // Fetch updated tasks after adding a new one
       })
       .catch((err) => { throw err });
-    setTaskValue(""); // Clear the task input field after adding a task
   }
 
   return (
@@ -47,7 +56,10 @@ const App = () => {
         {
           taskData?.map((item, index) => (
             <div className='task-list' key={index}>
-              <li>{item}</li>
+              <li>
+                <p>{item.task}</p>  
+              <span onClick={()=>removeTodoHandler(item.id)}>X</span>
+              </li>
             </div>
           ))
         }
