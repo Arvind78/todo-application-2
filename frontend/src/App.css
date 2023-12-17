@@ -1,0 +1,94 @@
+.main-container{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: brown
+};
+ 
+
+
+.task-input-container{
+    text-align: center;
+    padding: 50px 0px ;
+  }
+  
+  
+  .task-input-container h1{
+     color: aliceblue;
+     letter-spacing: 2px;
+     word-spacing: 1px;
+    padding: 20px 0px ;
+  }
+  
+  form{
+    width: 50%;
+   
+  justify-content: center;
+  display: inline-block;
+  /* margin: 10px 0px; */
+  padding: 10px 0px;
+   
+  }
+  
+  
+  form input{
+    width: 70%;
+   padding: 10px 5px;
+   /* margin: 0px 5px; */
+   border: none;
+   outline: none;
+   border-top:  0.5px solid lightgray;
+   border-bottom:  0.5px solid lightgray;
+    /* border-radius: 4px; */
+  
+  
+  }
+  form span{
+    background-color: lightgrey;
+   padding: 9.5px 10px;
+   
+   font-weight: 400;
+  border-radius: 5px 0px 0px 5px;
+  }
+  
+  form button{
+   
+   padding: 10px 10px;
+   background-color: rgb(11, 99, 11);
+   border: 0.5px solid rgb(210, 228, 210);
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+   border-radius:0px 7px 7px 0px;
+  }
+  
+  form button:hover{
+     transition: 400ms ease;
+     background-color: rgb(23, 165, 23);
+  }
+  
+  
+  form input::placeholder{
+    font-size: 16px;
+  }
+  
+  .task-list{
+    text-align: center;
+    font-size: 18px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   
+   
+  }
+  
+  .task-list li{
+    margin: 8px  0px;
+    padding: 6px 0px;
+    border-radius: 5px;
+    width: 40%;
+    list-style-type: none;
+    background-color: gray;
+  }
+  
+  

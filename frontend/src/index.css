@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,900;1,900&family=Kanit&family=Lobster&family=Noto+Sans:ital,wght@0,400;1,300&family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+.task-input-container{
+  text-align: center;
+  padding: 50px 0px ;
+}
+
+
+.task-input-container h1{
+   color: aliceblue;
+   letter-spacing: 2px;
+   word-spacing: 1px;
+  padding: 20px 0px ;
+}
