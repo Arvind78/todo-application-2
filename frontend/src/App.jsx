@@ -8,9 +8,9 @@ const App = () => {
   const [taskData, setTaskData] = useState([]);
 
   // useEffect to clear tasks initially 
-  // useEffect(() => {
-  //   getDataHandler();
-  // }, []);
+  useEffect(() => {
+    getDataHandler();
+  }, []);
 
   // Function to fetch tasks from the server
   const getDataHandler = () => {
